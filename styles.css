@@ -1,0 +1,10 @@
+#deck {
+    width: 350px;
+  }
+
+.draggableBox {
+    width: 350px;
+    height: 225px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }

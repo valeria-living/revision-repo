@@ -6,3 +6,20 @@ var cards = [
     ["Question4","Answer4",false],
     ["Question5","Answer5",false]
 ]
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    const img = new Image(0.1, 0.1);
+    img.src = "img/card.png";
+    ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.setDragImage(img, 0, 0)
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
