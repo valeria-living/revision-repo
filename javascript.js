@@ -12,10 +12,11 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    const img = new Image(0.1, 0.1);
+    const img = new Image();
     img.src = "img/card.png";
     ev.dataTransfer.setData("text", ev.target.id);
     ev.dataTransfer.setDragImage(img, 0, 0)
+    console.log(ev.target)
 }
 
 function drop(ev) {

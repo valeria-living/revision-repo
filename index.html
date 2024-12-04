@@ -9,13 +9,19 @@
 </head>
 <body>
     <div id="deck" class="draggableBox" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img id="drag1" src="img/card.png" draggable="true" ondragstart="drag(event)" height="225">
+        <div id="card0" class="card" draggable="true" ondragstart="drag(event)">
+            <img src="img/card.png" draggable="false">
+            <p class="centered">whatever</p>
+        </div>
+        <div id="card1" class="card" draggable="true" ondragstart="drag(event)">
+            <img src="img/card.png" draggable="false">
+            <p class="centered">whatever</p>
+        </div>
     </div>
     <div id="buttons">
 
     </div>
     <div id="cards" class="draggableBox" ondrop="drop(event)" ondragover="allowDrop(event)">
-
     </div> 
 </body>
 </html>
