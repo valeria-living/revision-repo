@@ -11,16 +11,33 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
+function printing(ev) {
+    console.log(ev.target)
+}
+
 function drag(ev) {
     const img = new Image();
     img.src = "img/card.png";
     ev.dataTransfer.setData("text", ev.target.id);
     ev.dataTransfer.setDragImage(img, 0, 0)
-    console.log(ev.target)
 }
 
 function drop(ev) {
     ev.preventDefault();
+    var target = ev.target
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    if (ev.target.className != "draggableBox") {
+        while (target.className != "draggableBox") {
+            target = target.parentElement
+            console.log(target)
+        }
+        target.appendChild(document.getElementById(data));
+    }
+    else {
+        var target = ev.target
+        console.log(ev.target)
+        ev.target.appendChild(document.getElementById(data));
+    }
   }
+
+  document.getElementById("card0").addEventListener('click', printing);

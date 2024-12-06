@@ -1,23 +1,27 @@
 #deck {
     width: 800px;
+    justify-content: center;
+    display: flex;
   }
 
 .draggableBox {
-    width: 800px;
+    float: inherit;
+    min-width: 147px;
     height: 225px;
     padding: 10px;
-    margin-top: 400px;
+    margin-bottom: 100px;
     border: 1px solid #aaaaaa;
   }
 
 .centered {
     position: absolute;
-    top: 50%;
-    left: 50px;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
   }
 
 .card {
     position: relative;
     color: rgb(0, 0, 0);
+    margin-right: 20px;
+    float:left;
 }
