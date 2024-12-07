@@ -1,8 +1,14 @@
 #deck {
     width: 800px;
-    justify-content: center;
+    justify-content:space-around;
     display: flex;
   }
+
+#cards {
+  width: 800px;
+  justify-content:space-around;
+  display: flex;
+}
 
 .draggableBox {
     float: inherit;
@@ -15,13 +21,18 @@
 
 .centered {
     position: absolute;
-    display: flex;
     justify-content: center;
   }
 
 .card {
     position: relative;
     color: rgb(0, 0, 0);
-    margin-right: 20px;
     float:left;
+    transition: all ease-out 0.1s;
+}
+
+.card:hover * {
+  color: rgb(255, 0, 0);
+  transform:scale(1.1);
+  transition: all ease-in 0.05s;
 }
