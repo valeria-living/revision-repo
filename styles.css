@@ -19,9 +19,11 @@
     border: 1px solid #aaaaaa;
   }
 
-.centered {
+  .centered {
     position: absolute;
-    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 .card {
@@ -31,7 +33,7 @@
     transition: all ease-out 0.1s;
 }
 
-.card:hover * {
+.card:hover {
   color: rgb(255, 0, 0);
   transform:scale(1.1);
   transition: all ease-in 0.05s;
