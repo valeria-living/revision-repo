@@ -8,25 +8,8 @@
 </head>
 <body>
     <div id="deck" class="draggableBox" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <div id="card0" class="card" draggable="true" ondragstart="drag(event)">
-            <img src="img/card.png" draggable="false">
-            <p class="centered">whatever0</p>
-        </div>
-        <div id="card1" class="card" draggable="true" ondragstart="drag(event)">
-            <img src="img/card.png" draggable="false" pointer-events="false">
-            <p class="centered">whatever1</p>
-        </div>
-        <div id="card2" class="card" draggable="true" ondragstart="drag(event)">
-            <img src="img/card.png" draggable="false" pointer-events="false">
-            <p class="centered">whatever2</p>
-        </div>
-        <div id="card3" class="card" draggable="true" ondragstart="drag(event)">
-            <img src="img/card.png" draggable="false" pointer-events="false">
-            <p class="centered">whatever3</p>
-        </div>
-        <div id="card4" class="card" draggable="true" ondragstart="drag(event)">
-            <img src="img/card.png" draggable="false" pointer-events="false">
-            <p class="centered">whatever4</p>
+        <div id="deck" class="card" draggable="true" ondragstart="dragDeck(event)" onclick="printing(this.id)">
+            <img src="img/deck.png" draggable="false" pointer-events="false">
         </div>
     </div>
     <div id="buttons" onclick="console.log('hi')"> 
