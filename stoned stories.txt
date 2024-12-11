@@ -1,0 +1,5 @@
+>o-1,1,#white,°3°
+import cosmetics/PetBoo
+
+?foe = boss
+    loadout 
